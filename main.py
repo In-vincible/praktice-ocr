@@ -29,7 +29,7 @@ def process_image(imagename):
     cv2.imwrite(filename, rotated)
 
     text = pytesseract.image_to_string(Image.open(filename))
-    # os.remove(filename)
+    os.remove(filename)
     print('\n' + imagename + '\n----\n\n' + text)
 
 process_image('report1.jpg')
